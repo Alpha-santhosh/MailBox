@@ -103,6 +103,7 @@ form button:hover {
 
 .btns {
   display: flex;
+  align-items: center;
   gap: 10px;
   margin-block: 15px;
 }

@@ -39,6 +39,7 @@ function Span() {
       <div className="btns">
         <button type='button'>Delete</button>
         <button type='button'>Spam</button>
+        <div className="items">Items : {spamData.length}</div>
       </div>
       <div className="container">
         {spamData.map((e) => {

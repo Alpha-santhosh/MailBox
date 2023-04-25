@@ -48,6 +48,7 @@ function Trash() {
       <div className="btns">
         <button type='button'>Delete</button>
         <button type='button'>Spam</button>
+        <div className="items">Items : {trashData.length}</div>
       </div>
       <div className="container">
         {trashData?.map((e) => {

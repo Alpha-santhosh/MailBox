@@ -52,7 +52,7 @@ function SearchView() {
 
     return (
         <div className='inbox_container'>
-            <div className="heading">Search Results : </div>
+            <div className="heading">Search Results :{searchData.length} </div>
             <div className="btns">
                 <button type='button'>Delete</button>
                 <button type='button'>Spam</button>

@@ -52,6 +52,7 @@ function Inbox() {
       <div className="btns">
         <button type='button'>Delete</button>
         <button type='button'>Spam</button>
+        <div className="items">Items : {inboxD.length}</div>
       </div>
       <div className="container">
         {inboxData.map((e) => {
