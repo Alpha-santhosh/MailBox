@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext, useEffect, useState } from "react";
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import RightSide from "./Components/RightSide";
+import { Data } from "./Data";
+
+export const GLOBAL_DATA = createContext();
 
 function App() {
+  const [inboxD, setinboxD] = useState([]);
+  const [spanD, setspanD] = useState([]);
+  const [trash, settrashD] = useState([]);
+
+  useEffect(() => {
+    setinboxD(Data);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <GLOBAL_DATA.Provider
+        value={{ inboxD, spanD, trash, setinboxD, setspanD, settrashD }}
+      >
+        <Navbar />
+        <RightSide />
+      </GLOBAL_DATA.Provider>
     </div>
   );
 }
