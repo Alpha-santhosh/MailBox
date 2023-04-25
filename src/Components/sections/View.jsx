@@ -1,14 +1,9 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { GLOBAL_DATA } from '../../App';
+import { Data } from '../../Data';
 
 function View() {
-  const data = useContext(GLOBAL_DATA)
-  const { inboxD, spanD, trash, setinboxD, setspanD, settrashD } = data;
-
-  const tempdata = useMemo(() => {
-    return [...inboxD];
-  }, [inboxD])
+  const tempdata = Data;
 
   const [email, setemail] = useState({});
   const { id } = useParams();

@@ -28,6 +28,20 @@ function Trash() {
     settrashD(resultD)
   }
 
+  const handleSpam = (para) => {
+    const odata = [...trashData]
+    const result = odata.filter((e) => {
+      return e.id === para
+    })
+    const resultD = odata.filter((e) => {
+      return e.id !== para
+    })
+    setspanD((preData) => {
+      return [...preData, ...result];
+    })
+    settrashD(resultD)
+  }
+
   return (
     <div className='inbox_container'>
       <div className="heading">Trash</div>
@@ -46,6 +60,9 @@ function Trash() {
             </Link>
             <button type='button' onClick={() => { handleDelete(e.id) }}>
               <i class="fa-solid fa-trash"></i>
+            </button>
+            <button type='button' style={{ color: "red" }} onClick={() => { handleSpam(e.id) }}>
+              <i class="fa-solid fa-circle-exclamation"></i>
             </button>
           </div>
         })}
