@@ -68,6 +68,19 @@ form {
   border-radius: 10px;
   padding: 3px;
   background-color: white;
+  display: flex;
+}
+
+form button {
+  border: none;
+  background-color: white;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.4s linear;
+}
+
+form button:hover {
+  color: orange;
 }
 
 .search_input {
@@ -162,7 +175,13 @@ h2 {
   cursor: pointer;
 }
 
-h2 span {
-  font-size: 18px;
+span {
+  font-size: 14px;
   font-weight: 400;
+}
+
+.view_layout{
+  border: 1px solid white;
+  height: 90%;
+  padding: 10px;
 }

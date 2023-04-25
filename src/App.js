@@ -10,6 +10,7 @@ function App() {
   const [inboxD, setinboxD] = useState([]);
   const [spanD, setspanD] = useState([]);
   const [trash, settrashD] = useState([]);
+  const [key, setKey] = useState("");
 
   useEffect(() => {
     setinboxD(Data);
@@ -18,7 +19,16 @@ function App() {
   return (
     <div className="app">
       <GLOBAL_DATA.Provider
-        value={{ inboxD, spanD, trash, setinboxD, setspanD, settrashD }}
+        value={{
+          inboxD,
+          spanD,
+          trash,
+          key,
+          setinboxD,
+          setspanD,
+          settrashD,
+          setKey,
+        }}
       >
         <Navbar />
         <RightSide />

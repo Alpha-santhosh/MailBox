@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Data } from '../../Data';
 
@@ -18,10 +18,18 @@ function View() {
 
   return (
     <div className='inbox_container'>
-      <div className="heading">View_Content_Mail</div>
-      <h2>{email?.subject}-<span>{email.email}</span></h2>
-      <br />
-      <p>{email.content}</p>
+      <div className="heading">View Content of Mail</div>
+      <div className="btns">
+        <button type='button'>Delete</button>
+        <button type='button'>Spam</button>
+      </div>
+      <div className="view_layout">
+        <h2>{email?.subject}-</h2>
+        <span>Mail Id : {email.email}</span>
+        <br />
+        <br />
+        <p>Content : {email.content}</p>
+      </div>
     </div>
   )
 }

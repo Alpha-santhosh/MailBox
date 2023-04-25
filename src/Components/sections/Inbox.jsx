@@ -18,7 +18,6 @@ function Inbox() {
     return string
   }
 
-
   const handleDelete = (para) => {
     const odata = [...inboxData]
     const result = odata.filter((e) => {
